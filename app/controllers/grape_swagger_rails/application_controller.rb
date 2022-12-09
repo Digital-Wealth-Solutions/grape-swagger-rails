@@ -6,6 +6,10 @@ module GrapeSwaggerRails
       before_filter { run_before_action }
     end
 
+    def call()
+      headers.merge!('Content-Security-Policy' => '')
+    end
+
     def index
     end
 
